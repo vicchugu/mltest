@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            House Price Prediction<br>
+            <form action="{{url_for('predict')}}" method="POST">
+                CRIM:  <input type="number" name='crim'  placeholder="Enter the no of " value="3.61"><br>
+                ZM:    <input type="number" name='zm'    placeholder="Enter the no of " value="11.36"><br>
+                INDUS: <input type="number" name='indus' placeholder="Enter the no of " value="11.13"><br>
+                CHAS:  <input type="number" name='chas'  placeholder="Enter the no of " value="0.06"><br>
+                NOX:   <input type="number" name='nox'   placeholder="Enter the no of " value="0.55"><br>
+                RM:    <input type="number" name='rm'    placeholder="Enter the no of " value="6.28"><br>
+                AGE:   <input type="number" name='age'   placeholder="Enter the no of " value="68.57"><br>
+                DIS:   <input type="number" name='dis'   placeholder="Enter the no of " value="3.79"><br>
+                RAD:   <input type="number" name='rad'   placeholder="Enter the no of " value="9.54"><br>
+                TAX:   <input type="number" name='tax'   placeholder="Enter the no of " value="408.23"><br>
+                PTRATIO:  <input type="number" name='ptratio'  placeholder="Enter the no of " value="18.45"><br>
+                B:     <input type="number" name='b'  placeholder="Enter the no of " value="356.67"><br>
+                LSTAT: <input type="number" name='lstat'  placeholder="Enter the no of " value="12.65"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> House Price is: {{data}}</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
